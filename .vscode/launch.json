@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch MGCB editor",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "tool_restore",
+      "program": "mgcb-editor",
+      "args": [
+        "frontend/Resource/Default.mgcb"
+      ],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/frontend/bin/Debug/net8.0/frontend.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/frontend",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "env": {
+        "LD_LIBRARY_PATH": "${workspaceRoot}/fnalibs/lib64/",
+        "PATH": "${env:PATH};${workspaceRoot}/fnalibs/x64/"
+      }
+    },
+    {
+      "name": "Compile shaders",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "shader_compile"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+FNA/
+fnalibs/
+bin
+obj
+
+#do not include compiled shaders
+*.fxb
+
+# idk if we need stats from mgcb in our repo
+.mgstats

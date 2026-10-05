@@ -1,0 +1,14 @@
+diff a/frontend/Resource/Tiles/test-tileset.ldtk b/frontend/Resource/Tiles/test-tileset.ldtk	(rejected hunks)
+@@ -1138,10 +1138,10 @@
+ 			"identifier": "Level_0",
+ 			"iid": "dc3683a0-e920-11ef-aab8-afa3b962be0d",
+ 			"uid": 0,
+-			"worldX": 0,
++			"worldX": -128,
+ 			"worldY": 0,
+ 			"worldDepth": 0,
+-			"pxWid": 256,
++			"pxWid": 384,
+ 			"pxHei": 256,
+ 			"__bgColor": "#C1C2D5",
+ 			"bgColor": null,

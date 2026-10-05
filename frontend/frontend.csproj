@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\FNA\FNA.Core.csproj" />
+    <ProjectReference Include="..\service\service.csproj" />
+    <ProjectReference Include="..\logic\logic.csproj" />
+    <ProjectReference Include="..\scenes\scenes.csproj" />
+    <ProjectReference Include="..\Myra\src\Myra\Myra.FNA.Core.csproj" />
+    <Content Include=".\Resource\bin\Sprites\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include=".\Resource\bin\Sounds\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Sounds\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Tiles\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Tiles\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Tiles\test-tileset\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Tiles\test-tileset\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Music\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Music\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Effects\*.fxb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Effects\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Sprites\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Sprites\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Backgrounds\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Backgrounds\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include=".\Resource\bin\Fonts\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Resource\Fonts\%(Filename)%(Extension)</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="GitInfo" Version="3.5.0" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>

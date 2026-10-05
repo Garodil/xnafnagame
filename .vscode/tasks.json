@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/frontend/frontend.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": "resource_compile"
+        },
+        {
+            "label": "shader_compile",
+            "type": "shell",
+            "group": "build",
+            "linux":{
+                "command": "${workspaceFolder}/.vscode/shader_compile_linux.sh"
+            },
+            "windows":{
+                "command": "powershell",
+                "args": [
+                    "-File",
+                    "${workspaceFolder}/.vscode/shader_compile_windows.ps1"
+                ],
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "resource_compile",
+            "type":"shell",
+            "group": "build",
+            "linux":{
+                "command": "${workspaceFolder}/.vscode/resource_compile_linux.sh"
+            },
+            "windows":{
+                "command": "powershell",
+                "args": [
+                    "-File",
+                    "${workspaceFolder}/.vscode/resource_compile_windows.ps1"
+                ],
+            },
+            "dependsOn": ["shader_compile", "tool_restore"],
+        },
+        {
+            "label": "tool_restore",
+            "type": "shell",
+            "command": "dotnet tool restore"
+        }
+    ]
+}

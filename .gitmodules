@@ -1,0 +1,18 @@
+[submodule "FNA"]
+	path = FNA
+	url = https://github.com/FNA-XNA/FNA
+[submodule "Myra"]
+	path = Myra
+	url = https://github.com/rds1983/Myra
+[submodule "FontStashSharp"]
+	path = FontStashSharp
+	url = https://github.com/FontStashSharp/FontStashSharp
+[submodule "XNAssets"]
+	path = XNAssets
+	url = https://github.com/rds1983/XNAssets
+[submodule "DdsKtxXna"]
+	path = DdsKtxXna
+	url = https://github.com/rds1983/DdsKtxXna
+[submodule "Box2D.NET"]
+	path = Box2D.NET
+	url = https://github.com/ikpil/Box2D.NET
